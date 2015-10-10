@@ -1,0 +1,7 @@
+language: ruby
+rvm:
+  - ruby 2.2.1
+after_success:
+- CI=true TRAVIS=true coveralls --verbose
+before_script:
+  - psql -c 'create database "maze_test";' -U postgres

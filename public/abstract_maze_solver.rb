@@ -1,0 +1,3 @@
+class AbstractMazeSolver
+  
+end
