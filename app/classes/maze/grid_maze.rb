@@ -5,19 +5,12 @@ class Maze::GridMaze
   DY  = { E => 0, W =>  0, N => -1, S => 1 } # shift by y axis
   OPPOSITE  = { E => W, W =>  E, N =>  S, S => N }
   
-  def initialize(width, height, grid = nil)
-    if grid.nil?
-      @width  = width
-      @height = height
-      @grid = Array.new(height) { Array.new(width, 0) }
-      step_from(0, 0, @grid)
-    else
-      @width  = grid[0].size
-      @height = grid.size
-      @grid = grid
-    end
-    @entry = [0,0]
-    @exit = [@height - 1, @width - 1]
+  def initialize(grid, entry, exit)
+    @grid = grid
+    @width  = grid[0].size
+    @height = grid.size
+    @entry = entry
+    @exit = exit
   end
   
   def print
@@ -33,19 +26,5 @@ class Maze::GridMaze
   
   def grid
     @grid
-  end
-  
-  private
-
-  def step_from(cx, cy, grid)
-    directions = [N, S, E, W].shuffle
-    directions.each do |direction|
-      nx, ny = cx + DX[direction], cy + DY[direction]
-      if ny.between?(0, grid.length-1) && nx.between?(0, grid[ny].length-1) && grid[ny][nx] == 0
-        grid[cy][cx] |= direction
-        grid[ny][nx] |= OPPOSITE[direction]
-        step_from(nx, ny, grid)
-      end
-    end
-  end
+  end 
 end

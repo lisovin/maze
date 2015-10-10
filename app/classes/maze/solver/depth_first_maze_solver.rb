@@ -6,15 +6,18 @@ class Maze::Solver::DepthFirstMazeSolver < Maze::Solver::AbstractMazeSolver
   
   def solve(maze)
     @grid = maze.grid
-    @width  = @grid[0].size
-    @height = @grid.size
+    @width  = @grid[0].length
+    @height = @grid.length
     @entry = [0,0]
     @exit = [@height - 1, @width - 1]
     visited = Array.new(@height) { Array.new(@width, 0) }
-    puts "VISITED #{visited}"
     path = []
     visit_cell(@entry[1], @entry[0], @grid, visited, path)
     path
+  end
+  
+  def directions(x, y)
+    @grid[y][x].to_s(2).scan(/./).reverse.map.with_index{|a,i| a.to_i*2**i}.reject{|a| a==0}
   end
 
   def visit_cell(sx, sy, grid, visited, path)
@@ -22,8 +25,7 @@ class Maze::Solver::DepthFirstMazeSolver < Maze::Solver::AbstractMazeSolver
       return
     end
     path << [sx, sy]
-    directions = @grid[sy][sx].to_s(2).scan(/./).reverse.map.with_index{|a,i| a.to_i*2**i}.reject{|a| a==0}
-    directions.each do |direction|
+    directions(sx, sy).each do |direction|
       if (@grid[sy][sx] & direction == direction) && 
         sy.between?(0, grid.length-1) && sx.between?(0, grid[sy].length-1)
         visited[sy][sx] |= direction
