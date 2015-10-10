@@ -12,7 +12,7 @@ class Maze::Builder::BacktrackingMazeFactory < Maze::Builder::AbstractMazeFactor
     else
       @grid = grid
     end
-    return Maze::GridMaze.new @grid, [0,0], [@grid.length, @grid[0].length]
+    return Maze::GridMaze.new @grid, [0,0], [@grid.length-1, @grid[0].length-1]
   end
   
   private

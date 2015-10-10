@@ -7,9 +7,11 @@ Build and solve maze
 ## Instructions 
 
 ```ruby
-	m = Maze.new 5, 5
-	m.print
-	m.solve
+	builder = Maze::Builder::BacktrackingMazeFactory.new 
+	maze = builder.build_maze 5, 6
+	solver = Maze::Solver::DepthFirstMazeSolver.new
+	solver.solve maze
+	maze.print
 ```
 #Implementation
 
