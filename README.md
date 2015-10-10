@@ -2,7 +2,7 @@
 
 Build and solve maze
 
-[![Build Status](https://travis-ci.org/fokcep/maze.svg)](https://travis-ci.org/fokcep/maze) [![Coverage Status](https://img.shields.io/coveralls/fokcep/maze.svg)](https://coveralls.io/r/fokcep/maze?branch=master) [![Code Climate](https://codeclimate.com/repos/5618e532e30ba0235a019e07/badges/fccc1f63d0f461ec2cb0/gpa.svg)](https://codeclimate.com/repos/5618e532e30ba0235a019e07/feed)
+[![Build Status](https://travis-ci.org/fokcep/maze.svg)](https://travis-ci.org/fokcep/maze) [![Coverage Status](https://img.shields.io/coveralls/fokcep/maze.svg)](https://coveralls.io/r/fokcep/maze?branch=master) [![Code Climate](https://codeclimate.com/repos/56196250e30ba03c71006026/badges/89f3b3d774dc1b286e68/gpa.svg)](https://codeclimate.com/repos/56196250e30ba03c71006026/feed)
 
 ## Instructions 
 

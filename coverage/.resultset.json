@@ -44,27 +44,12 @@
         null,
         1
       ],
-      "/Users/fokcep/Development/maze/config/environments/development.rb": [
+      "/Users/fokcep/Development/maze/config/environments/test.rb": [
         1,
         null,
         null,
         null,
         null,
-        null,
-        1,
-        null,
-        null,
-        1,
-        null,
-        null,
-        1,
-        1,
-        null,
-        null,
-        1,
-        null,
-        null,
-        1,
         null,
         null,
         1,
@@ -75,6 +60,23 @@
         1,
         null,
         null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        1,
         null,
         null,
         1,
@@ -369,6 +371,6 @@
         null
       ]
     },
-    "timestamp": 1444503796
+    "timestamp": 1444503875
   }
 }
