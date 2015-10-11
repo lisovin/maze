@@ -10,8 +10,6 @@ module Maze
   class Application < Rails::Application
     
     config.autoload_paths << Rails.root.join("app/classes")
-    config.autoload_paths << Rails.root.join("app/classes/maze")
-    config.autoload_paths << Rails.root.join("app/classes/maze/builder")
     
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers

@@ -1,5 +1,12 @@
 class Maze::Builder::SimpleMazeFactory < Maze::Builder::AbstractMazeFactory
-  def build_maze(width, height, grid)
-    return Maze::GridMaze.new grid, [0,0], [grid.length, grid[0].length]
+  
+  def initialize(grid)
+    @grid = grid
+    @begin_x, @begin_y = 0, 0
+    @end_x, @end_y = grid[0].size-1, grid.size-1
+  end
+  
+  def build_maze
+    Maze::GridMaze.new @grid, [@begin_x, @begin_y], [@end_x, @end_y]
   end
 end
